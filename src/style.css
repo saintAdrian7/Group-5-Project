@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Karla', sans-serif; 
+}
+
+h1,h3{
+box-shadow: 0 0 2px;
+margin-top: 0;
+font-family: 'Karla', sans-serif;
+font-size: 2.5rem;
+font-weight: 700;
+color: #333; 
+text-align: center;
+margin-bottom: 20px;
+text-transform: capitalize; 
+line-height: 1.2;
+cursor: pointer; 
+transition: background-color 0.3s ease; 
+padding: 10px 20px; 
+}
+h2{
+    font-family: 'Karla', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD54F; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize; 
+    line-height: 1.2;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    padding: 10px 20px;    
+}
+    
+ h1:hover {
+        background-color: #f0f0f0; /* Change background color on hover */
+ }
+
+ .blog-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+
+.container{
+    display: flex;
+    gap: 0;
+    flex-direction: row;
+}
+.form-container{
+    background-color: whitesmoke;
+    margin: auto;
+    margin-right: 20rem;
+    border-radius: 15px;
+    box-shadow: 0 0 5px;
+    padding: 50px;
+    height: 500px;
+
+}
+.blog-container{
+    width: 100%;
+    height: 100%;
+}
+.post{
+text-align: center;
+width: 396px;
+height: auto;
+padding: 30px;
+margin-top: 20px;
+gap: 0px;
+background-color: #E0F7fA;
+color: #37474F;
+border-radius: 15px;
+box-shadow: 0 0 5px;
+    
+}
+.post p{
+ font-size: 1.2rem;
+ font-weight: bold;
+ color:rgb(26, 24, 24)
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.img-container img{
+    display: block;
+    width: 70%;
+    height: 400px;
+    margin: 10px 100px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px;
+}
+
+#sign-btn{
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    color: lightgreen;
+    width: 100px;
+    background-image: linear-gradient(black,gray);
+}
+
+#sign-btn:hover{
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    background-color: white;
+    color: #dc3545;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 6px;
+}
+
+@media (min-width: 769px) {
+    .img-container img {
+        display: block;
+    }
+    .post{
+        width: 600px;
+    }
+}

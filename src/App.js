@@ -1,9 +1,10 @@
 import React from "react"
+import Log from "./Log"
 
 export default function App(){
     return (
         <>
-        <h1>This is a Blog site</h1>
+     <Log />
         </>
     )
 }
