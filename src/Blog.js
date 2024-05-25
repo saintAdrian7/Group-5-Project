@@ -1,6 +1,7 @@
 import React from "react";
 import WriteBlogForm from "./WriteBlogForm";
 import Sidebar from "./Sidebar";
+import Nav from "./Nav";
 
 
 export default function Blog(){
@@ -22,21 +23,27 @@ return(
 <div className="blog-container"> 
 <Sidebar  {...navProps}/>
    <div>
-      {isCreate ? (<WriteBlogForm onPost={handlePost}/>) : (<div className="blog-container">
-   
-            <ul>
-                     {posts.map((post, index) => (
-                      <div className="post"><li key={index}>
-                      <h3>{post.title}</h3>
-                      <p>{post.content}</p>
-                      <p>{post.date}</p>
-                  </li></div>
-                       
-                ))}
-                
-             </ul>
-             
-        </div>)}
+   {isCreate ? (
+  <WriteBlogForm onPost={handlePost} />
+) : (
+  <>
+    <Nav />
+    <div className="blog-container">
+      <ul>
+        {posts.map((post, index) => (
+          <div className="post" key={index}>
+            <li>
+              <h3>{post.title}</h3>
+              <p>{post.content}</p>
+              <p>{post.date}</p>
+            </li>
+          </div>
+        ))}
+      </ul>
+    </div>
+  </>
+)}
+
     </div>
       
     

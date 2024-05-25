@@ -67,6 +67,8 @@ h2{
 .blog-container{
     width: 100%;
     height: 100%;
+    margin-top: 100px;
+    margin-left: -60px;
 }
 .post{
 text-align: center;
@@ -79,6 +81,8 @@ background-color: #E0F7fA;
 color: #37474F;
 border-radius: 15px;
 box-shadow: 0 0 5px;
+
+
     
 }
 .post p{
