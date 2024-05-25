@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Group-5-Project/static/css/main.c474bff4.css",
+    "main.js": "/Group-5-Project/static/js/main.7ff136a7.js",
+    "index.html": "/Group-5-Project/index.html",
+    "main.c474bff4.css.map": "/Group-5-Project/static/css/main.c474bff4.css.map",
+    "main.7ff136a7.js.map": "/Group-5-Project/static/js/main.7ff136a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c474bff4.css",
+    "static/js/main.7ff136a7.js"
+  ]
+}
