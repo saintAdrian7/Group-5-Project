@@ -7,7 +7,7 @@ import styles from './Sidebar.module.css'
 
 
 
-export default function Rightbar({ posts = [], onDelete }){
+export default function Rightbar({ posts = [], onDelete, onEdit}){
 
 const trendingPosts = posts.slice(0, 3);
 function handleDelete(index){
@@ -47,7 +47,7 @@ return(
             <li className="user-post" key={index}>
             
               <h7>Title:{post.title}</h7>
-              <button className={styles.navIcon}><FaEdit /></button>
+              <button onClick={onEdit} className={styles.navIcon}><FaEdit /></button>
               <button onClick={handleDelete} className={styles.navIcon}><FaTrash /></button>
              
               </li>

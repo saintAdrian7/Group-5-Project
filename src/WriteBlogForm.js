@@ -4,10 +4,17 @@ import "./WriteBlogForm.css"
 
 
 
-export default function WriteBlogForm(props){
+export default function WriteBlogForm({onPost,postEdit}){
 
     const [title,setTitle] = React.useState('')
     const [content,setContent] = React.useState(``)
+
+   React.useEffect(() => {
+        if (postEdit) {
+          setTitle(postEdit.title);
+          setContent(postEdit.content);
+        }
+      }, [postEdit]);
     
     
     function handleSubmit (event){
@@ -22,7 +29,7 @@ export default function WriteBlogForm(props){
         content,
         date: new Date().toISOString()
     }
-    props.onPost(newPost)
+    onPost(newPost)
     setTitle('');
     setContent('');
     }

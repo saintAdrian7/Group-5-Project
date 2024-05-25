@@ -8,6 +8,8 @@ export default function Blog() {
   const initialPosts = JSON.parse(localStorage.getItem('posts')) || [];
   const [posts, setPosts] = React.useState(initialPosts);
   const [isCreate, setIsCreate] = React.useState(false);
+  const [editIndex,setEditIndex] = React.useState(null)
+  const [postEdit,setPostEdit] = React.useState(null)
 
   React.useEffect(() => {
     localStorage.setItem('posts', JSON.stringify(posts));
@@ -22,14 +24,29 @@ function deletePost(index){
   }
 
   function handlePost(newPost) {
-    setPosts([...posts, newPost]);
+    if (editIndex !== null) {
+      const updatedPosts = [...posts];
+      updatedPosts[editIndex] = newPost;
+      setPosts(updatedPosts);
+      setEditIndex(null);  
+      setPostEdit(null);  
+    } else {
+     
+      setPosts([...posts, newPost]);
+    }
     setIsCreate(false);
+  }
+  function handleEdit(index) {
+    setEditIndex(index);          
+    setPostEdit(posts[index]);    
+    setIsCreate(true);            
   }
 
   const navProps = {
     isCreate,
     setIsCreate
   };
+
  
 
   return (
@@ -37,7 +54,7 @@ function deletePost(index){
       <Sidebar {...navProps} />
       <div>
         {isCreate ? (
-          <WriteBlogForm onPost={handlePost} />
+           <WriteBlogForm onPost={handlePost} postEdit={postEdit} />
         ) : (
           <>
             <Nav />
@@ -63,7 +80,7 @@ function deletePost(index){
           </>
         )}
       </div>
-    {!isCreate && <Rightbar onDelete={deletePost} posts={posts} />} 
+    {!isCreate && <Rightbar onEdit={handleEdit} onDelete={deletePost} posts={posts} />} 
     </div>
   );
 }
