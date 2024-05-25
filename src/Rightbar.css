@@ -1,0 +1,59 @@
+.right-bar-container{
+    height: 100vh;
+    width: 250px;
+    background-color: #4C2C82; 
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+}
+h4{
+    box-shadow: 0 0 2px;
+    margin-top: 0;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e0ffff; 
+    text-align: center;
+    text-transform: capitalize; 
+    line-height: 1.2;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    padding: 10px 20px; 
+    }
+    
+ h4:hover {
+        background-color:#6497b1 ; 
+ }
+
+ h5,h6{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+ }
+
+ .user-post{
+display: flex;
+flex-direction: row;
+
+ }
+ .user-post h7{
+    flex-wrap: nowrap;
+ }
+
+ .user-post button{
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+ }
+
+ .user-post button:hover{
+    color: whitesmoke;
+ }

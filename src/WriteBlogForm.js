@@ -9,6 +9,7 @@ export default function WriteBlogForm(props){
     const [title,setTitle] = React.useState('')
     const [content,setContent] = React.useState(``)
     
+    
     function handleSubmit (event){
         event.preventDefault()
 
