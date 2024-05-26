@@ -81,7 +81,9 @@ function deletePost(index){
           </>
         )}
       </div>
-    {!isCreate && <Rightbar onEdit={handleEdit} onDelete={deletePost} posts={posts} />} 
+      <div>
+               {!isCreate && <Rightbar onEdit={handleEdit} onDelete={deletePost} posts={posts} />} 
+       </div>
     </div>
   );
 }

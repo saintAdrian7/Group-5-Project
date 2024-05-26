@@ -22,6 +22,29 @@
   .navText {
     font-size: 1.2em;
   }
+  .btnEl{
+   display: inline;
+   margin-left: 100px;
+   justify-content: space-between;
+  }
+  .btnEl1{
+color: green;
+border: none;
+background: transparent;
+font-size: 1.2rem;
+  }
+  .btnEl2{
+color: red;
+border: none;
+background: transparent;
+margin-left: 20px;
+font-size: 1.2rem;
+}
+.btnEl1:hover, .btnEl2:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+ 
   
   .createButton {
     margin-top: auto;

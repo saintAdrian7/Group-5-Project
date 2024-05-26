@@ -56,18 +56,15 @@ h2{
     padding: 10px 20px; 
     }
 
- .blog-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
- }
+
 
 
 .container{
     display: flex;
-    gap: 0;
-    flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   margin-top: 100px;
+   margin-left: 100px;
 }
 .form-container{
     background-color: whitesmoke;
@@ -258,7 +255,7 @@ transform: translateX(0);
         display: block;
         position: fixed;
         top: 2%;
-        right: 40%;
+        right: 50%;
         z-index: 2;
         font-size: 1.5rem;      
         cursor: pointer;
@@ -275,7 +272,7 @@ transform: translateX(0);
     }
     .nav-container{
         margin: auto;
-        width: 900px;
+        width: 500px;
         height: 150px;
         overflow-x: hidden;   
        
@@ -284,14 +281,17 @@ transform: translateX(0);
         
     }
 .right-bar-container{
-position: fixed;
-top: 0;
-right: 25%;
-overflow-x: hidden;
-    }
+    height: 500px;
+     overflow-x: hidden;
+     transform: translateX(250px);
+ }
+
+.right-bar-container.show{
+  transform: translateX(-250px); 
+}
 .blog-container{
     overflow: hidden;
-    width: 600px;
+    width:500px;
 }
     
 .nav-container input{
@@ -301,28 +301,34 @@ overflow-x: hidden;
     top:10%;
     left: 20%;
 }
+.bot-btn{
+    position: absolute;
+    top: 80%;
+    left: 55%;
+}
 
 
 .content-container{
     position: absolute;
-    width: 600px;
+    width: 400px;
     height: 100%;
     margin-top: 150px;
-    margin-left: -30px;
+    margin-left: -90px;
+    margin-right: 0;
     
     
 }
 
 .message{ 
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 30%;
+    left: 10%;
     
 }
 .message2{
     position: absolute;
-    top: 70%;
-    left:15%;  
+    top: 40%;
+    left:5%;  
 }
 .container{
     display: flex;
@@ -335,7 +341,7 @@ overflow-x: hidden;
     display: none;
 }
 .form-container{
-    margin-left: 100px;
+    margin-left: 0px;
     margin-top: 100px;
     padding: 40px;
     height: 400px;
@@ -352,12 +358,13 @@ overflow-x: hidden;
 }   
 .post-container{
     margin-top: 100px;
-    margin-left: 50px;
+    margin-left: -0px;
+    z-index: 2;
     width: 300px;
     height: 400px;
 }
 .post-container input{
-    width: 100px;
+    width: 200px;
     height: 50px;
 }
 .post-container textarea{
@@ -367,6 +374,7 @@ overflow-x: hidden;
 .sidebarContainer{
     height: auto;
 }
+
 
 
 }
@@ -379,24 +387,24 @@ overflow-x: hidden;
 
 .content-container{
     position: absolute;
-    width: 100%;
+    width: 350px;
     height: 100%;
     margin-top: 150px;
-    margin-left: 100px;
+    margin-left: -20px;
     
     
 }
 
 .message{ 
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 30%;
+    left: 5%;
     
 }
 .message2{
     position: absolute;
-    top: 70%;
-    left:15%;  
+    top: 40%;
+    left:0%;  
 }
 .container{
     display: flex;
@@ -409,10 +417,10 @@ overflow-x: hidden;
     display: none;
 }
 .form-container{
-    margin: auto;
+    margin-left: 120px;
     margin-top: 100px;
     padding: 40px;
-    height: 500px;
+    height: 400px;
 }
 
 #sign-btn {
@@ -425,16 +433,29 @@ overflow-x: hidden;
 }   
 .post-container{
     margin-top: 100px;
-    width: 500px;
-    height: 600px;
+    width: 300px;
+    height: 400px;
 }
 .post-container input{
-    width: 400px;
+    width: 200px;
     height: 50px;
 }
 .post-container textarea{
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+}
+
+.bot-btn{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
+.hamburger-right-sidebar {
+    position: fixed;
+    top: 2%;
+    right: 38%;
+   
+    
 }
 
 

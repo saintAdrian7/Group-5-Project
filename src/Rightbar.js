@@ -61,8 +61,9 @@ export default function Rightbar({ posts = [], onDelete, onEdit }) {
                             posts.map((post, index) => (
                                 <li className="user-post" key={index}>
                                     <h7>Title: {post.title}</h7>
-                                    <button onClick={() => onEdit(index)} className={styles.navIcon}><FaEdit /></button>
-                                    <button onClick={() => handleDelete(index)} className={styles.navIcon}><FaTrash /></button>
+                                    <div className={styles.btnEl}></div>
+                                    <button onClick={() => onEdit(index)} className={styles.btnEl1}><FaEdit /></button>
+                                    <button onClick={() => handleDelete(index)} className={styles.btnEl2}><FaTrash /></button>
                                 </li>
                             ))
                         ) : (

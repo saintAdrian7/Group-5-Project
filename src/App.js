@@ -35,10 +35,7 @@ return
     {isRegistered ?(<Blog /> ) :(<div className="container">
 
        
-<div className="img-container">
-    <img src="./picture1.jpg" alt="image"  />
-    <img src="./picture2.jpg" alt="people picture" />
-</div>
+
 
 <div className="form-container">
     <form onSubmit={handleSubmit}>

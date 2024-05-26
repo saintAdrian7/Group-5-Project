@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     margin-left: 250px;
-    width: 900px;
+    width: 750px;
     height: 150px; 
     position: absolute;   
     display: flex;
@@ -28,4 +28,18 @@
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+}
+.bot-btn{
+    border: none;
+    background: transparent;
+    color: orange;
+    font-weight: bold;
+    position: absolute;
+    top: 80%;
+    left: 75%;
+    font-size: 1.2rem;
+    
+}
+.bot-btn:hover{
+    transform: scale(1.3);
 }
