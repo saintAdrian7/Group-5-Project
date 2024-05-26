@@ -55,13 +55,13 @@ margin-top:20px ;
    margin-top: 5px;
  }
 
- .user-post button{
+ .user-posts button{
     margin-left: 10px;
     border: none;
     background-color: transparent;
  }
 
- .user-post button:hover{
+ .user-posts button:hover{
     color: whitesmoke;
  }
 
