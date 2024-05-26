@@ -1,14 +1,17 @@
 import React from "react"
 import styled from 'styled-components'
-import { FaHome,FaCompass,FaPaperPlane,FaUser,FaCog,FaPlusCircle } from "react-icons/fa";
+import { FaHome,FaCompass,FaPaperPlane,FaUser,FaCog,FaPlusCircle,FaBars } from "react-icons/fa";
 import styles from './Sidebar.module.css'
 
 export default function Nav(props){
     const { isCreate, setIsCreate } = props;
+    const [showSidebar, setShowSidebar] = React.useState(false);
 
   return (
-    
-<div className={styles.sidebarContainer}>
+    <>
+<FaBars className="hamburger-sidebar" onClick={() => setShowSidebar(!showSidebar)} />
+<div className={`sidebarContainer ${showSidebar ? 'show' : ''}`}>
+
     <div className={styles.navItem}>
        <div className={styles.navIcon} onClick={() => setIsCreate(false)}><FaHome /></div>
        <div className={styles.navText} onClick={() => setIsCreate(false)}>Home</div>
@@ -37,5 +40,5 @@ export default function Nav(props){
 
 
 
-  )
+    </> )
 }

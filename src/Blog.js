@@ -29,7 +29,8 @@ function deletePost(index){
       updatedPosts[editIndex] = newPost;
       setPosts(updatedPosts);
       setEditIndex(null);  
-      setPostEdit(null);  
+      setPostEdit(null);
+       
     } else {
      
       setPosts([...posts, newPost]);

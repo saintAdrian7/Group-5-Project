@@ -16,6 +16,7 @@
 h4{
     box-shadow: 0 0 2px;
     margin-top: 0;
+    margin-left: 15px;
     font-family: 'Karla', sans-serif;
     font-size: 1rem;
     font-weight: 700;
@@ -42,10 +43,16 @@ h4{
  .user-post{
 display: flex;
 flex-direction: row;
+margin-top:20px ;
 
  }
  .user-post h7{
     flex-wrap: nowrap;
+    
+ }
+ .right-bar-container p{
+   text-align: center;
+   margin-top: 5px;
  }
 
  .user-post button{
@@ -56,4 +63,11 @@ flex-direction: row;
 
  .user-post button:hover{
     color: whitesmoke;
+ }
+
+
+ hr{
+   margin-top: 50px;
+   box-shadow: 0 0 5px black;
+
  }

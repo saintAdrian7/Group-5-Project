@@ -8,14 +8,19 @@ export default function WriteBlogForm({onPost,postEdit}){
 
     const [title,setTitle] = React.useState('')
     const [content,setContent] = React.useState(``)
+  
 
-   React.useEffect(() => {
+    React.useEffect(() => {
         if (postEdit) {
           setTitle(postEdit.title);
           setContent(postEdit.content);
+          
+        } else {
+          setTitle("");
+          setContent("");
+         
         }
       }, [postEdit]);
-    
     
     function handleSubmit (event){
         event.preventDefault()
