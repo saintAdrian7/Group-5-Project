@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from 'styled-components';
-import { FaEdit, FaTrash, FaBars, FaTimes } from 'react-icons/fa';
+import { FaEdit, FaTrash, FaBars, FaTimes,FaEye } from 'react-icons/fa';
 import styles from './Sidebar.module.css';
 
 export default function Rightbar({ posts = [], onDelete, onEdit }) {
@@ -33,7 +33,7 @@ export default function Rightbar({ posts = [], onDelete, onEdit }) {
         <>
             {showRightSidebar 
                 ? <FaTimes className="hamburger-right-sidebar" onClick={() => setShowRightSidebar(!showRightSidebar)} />
-                : <FaBars className="hamburger-right-sidebar" onClick={() => setShowRightSidebar(!showRightSidebar)} />}
+                : <FaEye className="hamburger-right-sidebar" onClick={() => setShowRightSidebar(!showRightSidebar)} />}
             
             <div className={`right-bar-container ${showRightSidebar ? 'show' : ''}`}>
                 <h4>TBN BLOGGING APP</h4>
