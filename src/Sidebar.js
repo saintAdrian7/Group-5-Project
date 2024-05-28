@@ -5,7 +5,7 @@ import styles from './Sidebar.module.css';
 
 export default function Nav(props) {
     const { isCreate, setIsCreate } = props;
-    const [showSidebar, setShowSidebar] = React.useState(false);
+    const [showSidebar, setShowSidebar] = React.useState(true);
 
     useEffect(() => {
         function handleClickOutside(event) {

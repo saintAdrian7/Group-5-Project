@@ -24,7 +24,7 @@
   }
   .btnEl{
    display: inline;
-   margin-left: 100px;
+   margin-left: 50px;
    justify-content: space-between;
   }
   .btnEl1{
@@ -37,7 +37,7 @@ font-size: 1.2rem;
 color: red;
 border: none;
 background: transparent;
-margin-left: 20px;
+margin-left: 10px;
 font-size: 1.2rem;
 }
 .btnEl1:hover, .btnEl2:hover{

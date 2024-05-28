@@ -3,8 +3,6 @@ import WriteBlogForm from "./WriteBlogForm";
 import Sidebar from "./Sidebar";
 import Nav from "./Nav";
 import Rightbar from "./Rightbar";
-import { FaThumbsUp } from "react-icons/fa";
-
 
 export default function Blog() {
   const initialPosts = JSON.parse(localStorage.getItem('posts')) || [];
@@ -12,6 +10,7 @@ export default function Blog() {
   const [isCreate, setIsCreate] = React.useState(false);
   const [editIndex, setEditIndex] = React.useState(null);
   const [postEdit, setPostEdit] = React.useState(null);
+  const [searchTerm, setSearchTerm] = React.useState('');
 
   React.useEffect(() => {
     localStorage.setItem('posts', JSON.stringify(posts));
@@ -40,18 +39,20 @@ export default function Blog() {
     setEditIndex(index);
     setPostEdit(posts[index]);
     setIsCreate(true);
-  }
+}
 
-  function handleLike(index) {
-    const updatedPosts = [...posts];
-    updatedPosts[index].likes = (updatedPosts[index].likes || 0) + 1;
-    setPosts(updatedPosts);
-  }
 
   const navProps = {
     isCreate,
-    setIsCreate
+    setIsCreate,
+    searchTerm,
+    setSearchTerm
   };
+
+  const filteredPosts = posts.filter(post =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.content.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="blog-container">
@@ -61,19 +62,16 @@ export default function Blog() {
           <WriteBlogForm onPost={handlePost} postEdit={postEdit} />
         ) : (
           <>
-            <Nav />
-            {posts.length > 0 ? (
+            <Nav {...navProps} />
+            {filteredPosts.length > 0 ? (
               <div className="content-container">
                 <ul>
-                  {posts.map((post, index) => (
+                  {filteredPosts.map((post, index) => (
                     <li className="post" key={index}>
                       <h3>Title: {post.title}</h3>
                       <p>{post.content}</p>
-                      <p className="date">Date: {new Date(post.date).toLocaleDateString()}</p>
-                      <div className="like-container">
-                        <FaThumbsUp onClick={() => handleLike(index)} className="like-icon" />
-                        <span>{post.likes || 0} Likes</span>
-                      </div>
+                      <p className="date">Date: {new Date(post.date).toLocaleString()}</p>
+                    
                     </li>
                   ))}
                 </ul>
@@ -88,7 +86,7 @@ export default function Blog() {
         )}
       </div>
       <div>
-        {!isCreate && <Rightbar onEdit={handleEdit} onDelete={deletePost} posts={posts} />}
+        {!isCreate && <Rightbar onEdit={handleEdit} onDelete={deletePost} posts={filteredPosts} />}
       </div>
     </div>
   );
